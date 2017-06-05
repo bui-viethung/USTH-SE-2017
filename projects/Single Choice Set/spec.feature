@@ -27,14 +27,10 @@ Scenario: Question about condition of Goji berries
 		          And "Dried" answer
 	        When player chooses Dried answer
 	        Then he has 2 point
-		          And the result appear
+		       
 
 Scenario: Scoreboard
-	        Given "You got 2 of 3 correct"
-		            And "Retry" button
-		            And "Show solution" button
-	        When player click retry button
-	        Then return to question 1
-	        When player click show solution button
-	        Then show 3 answers of 3 questions
+	        When player click Submit answer
+		Then show the result of the quiz
+		Quiz end.
 	
